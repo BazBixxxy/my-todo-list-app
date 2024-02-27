@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-do</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="left">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="search" />
+        </div>
+        <div class="right">
+          <i class="fa-regular fa-user"></i>
+          <div class="profile-name">Denise</div>
+          <i class="fa-solid fa-angle-down"></i>
+        </div>
+      </nav>
+    </header>
+    <div class="project-title">
+      <h2>My projects</h2>
+    </div>
+    <aside>
+      <nav>
+        <div class="top">Menu</div>
+        <div class="middle">
+          <div class="panel-heading">Tasks</div>
+          <div class="side-item add-item">
+            <div class="left"><i class="fa-solid fa-circle-plus"></i></div>
+            <div class="right">add task</div>
+          </div>
+          <div class="side-item">
+            <div class="left"><i class="fa-solid fa-list-check"></i></div>
+            <div class="right">my tasks</div>
+          </div>
+          <div class="side-item">
+            <div class="left"><i class="fa-solid fa-list"></i></div>
+            <div class="right">completed</div>
+          </div>
+          <div class="side-item inbox">
+            <div class="left"><i class="fa-solid fa-inbox"></i></div>
+            <div class="right">inbox</div>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="panel-heading">Categories</div>
+          <div class="side-item side-home">
+            <div class="left"><div class="hash">#</div></div>
+            <div class="right">home</div>
+          </div>
+          <div class="side-item side-work">
+            <div class="left"><div class="hash">#</div></div>
+            <div class="right">work</div>
+          </div>
+          <div class="side-item side-other">
+            <div class="left"><div class="hash">#</div></div>
+            <div class="right">other</div>
+          </div>
+        </div>
+      </nav>
+    </aside>
+    <div class="form">
+      <div class="close">&#10005;</div>
+      <form id="form">
+        <div class="input-field">
+          <label for="task">Task</label>
+          <input type="text" id="task" />
+        </div>
+        <div class="input-field">
+          <label for="time">Time</label>
+          <input type="time" id="time" />
+        </div>
+        <div class="input-field">
+          <label for="date">Date</label>
+          <input type="date" id="date" />
+        </div>
+        <div class="input-field">
+          <label for="description">Description</label>
+          <textarea
+            name="description"
+            id="description"
+            cols="30"
+            rows="5"
+          ></textarea>
+        </div>
+        <div class="input-field">
+          <input type="radio" id="work" name="catergory" />
+          <label for="work">Work</label>
+        </div>
+        <div class="input-field">
+          <input type="radio" id="home" name="catergory" />
+          <label for="home">Home</label>
+        </div>
+        <div class="input-field">
+          <input type="radio" id="other" name="catergory" />
+          <label for="other">Other</label>
+        </div>
+        <button type="button" id="addButton">Add To List</button>
+      </form>
+    </div>
+    <div class="main-content">
+      <div class="projects"></div>
+    </div>
+    <script src="main.js"></script>
+    <script src="../src/script.js"></script>
+  </body>
+</html>
