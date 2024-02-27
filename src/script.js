@@ -1,6 +1,8 @@
 const todoList = [];
+// addToList();
+localStorage.setItem("storage", JSON.stringify(todoList));
+JSON.parse(localStorage.getItem("storage"));
 console.log(todoList);
-
 
 function Todo(name, time, date, category) {
   this.name = name;
@@ -8,7 +10,6 @@ function Todo(name, time, date, category) {
   this.date = date;
   this.category = category;
 }
-
 
 function addToList() {
   const taskElement = document.getElementById("task");
@@ -37,10 +38,6 @@ function addToList() {
   );
 
   todoList.push(newTodoItem);
-  localStorage.setItem("storage", JSON.stringify(todoList));
-
-  // const todoList_serialized = JSON.stringify(todoList);
-  // localStorage.setItem("stored_items", todoList_serialized);
 
   taskElement.value = "";
   timeElement.value = "";
@@ -53,7 +50,6 @@ function addToList() {
 }
 
 function renderTodoHTML() {
-  JSON.parse(localStorage.getItem("storage"));
   let todoHTML = "";
   todoList.forEach((item, index) => {
     const html = `
@@ -98,7 +94,7 @@ renderTodoHTML();
 const projectArea = document.querySelector(".projects");
 
 if (projectArea.innerHTML === "") {
-  projectArea.innerHTML = `add an item to your list`;
+  projectArea.innerHTML = `add something to your todo list`;
 }
 
 document.querySelector(".add-item").addEventListener("click", () => {
