@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>To-do</title>
-  </head>
+    <title>Todo App</title>
+  <script defer src="bundle.99b57d162b3bef74d2cb.js"></script></head>
   <body>
     <header>
       <nav>
@@ -24,18 +24,18 @@
     </div>
     <aside>
       <nav>
-        <div class="top">Menu</div>
+        <div class="top">Todo App</div>
         <div class="middle">
           <div class="panel-heading">Tasks</div>
           <div class="side-item add-item">
             <div class="left"><i class="fa-solid fa-circle-plus"></i></div>
             <div class="right">add task</div>
           </div>
-          <div class="side-item">
+          <div class="side-item my-tasks">
             <div class="left"><i class="fa-solid fa-list-check"></i></div>
             <div class="right">my tasks</div>
           </div>
-          <div class="side-item">
+          <div class="side-item completed-tasks">
             <div class="left"><i class="fa-solid fa-list"></i></div>
             <div class="right">completed</div>
           </div>
@@ -66,7 +66,7 @@
       <form id="form">
         <div class="input-field">
           <label for="task">Task</label>
-          <input type="text" id="task" />
+          <input type="text" id="task" required />
         </div>
         <div class="input-field">
           <label for="time">Time</label>
@@ -103,7 +103,5 @@
     <div class="main-content">
       <div class="projects"></div>
     </div>
-    <script src="main.js"></script>
-    <script src="../src/script.js"></script>
   </body>
 </html>
