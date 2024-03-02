@@ -112,6 +112,9 @@ aside nav > .bottom .side-item .right {
   color: hsl(90, 100%, 29%);
 }
 
-.middle .add-item:hover {
+.middle .add-item:hover,
+aside nav > .middle .my-tasks:hover,
+aside nav > .middle .completed-tasks:hover,
+aside nav > .middle .inbox:hover{
   color: var(--call-to-action);
 }

@@ -3,7 +3,7 @@
   display: none;
   background-color: var(--header-background);
   width: 500px;
-  height: 500px;
+  height: 100%;
   position: fixed;
   top: 80px;
   right: 0;
