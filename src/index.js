@@ -346,6 +346,7 @@ function renderHome() {
 
 document.querySelector(".side-home").addEventListener("click", () => {
   renderHome();
+  document.querySelector(".project-title").innerHTML = `<h2>Home</h2>`;
 });
 
 function renderWork() {
@@ -435,6 +436,7 @@ function renderWork() {
 
 document.querySelector(".side-work").addEventListener("click", () => {
   renderWork();
+  document.querySelector(".project-title").innerHTML = `<h2>Work</h2>`;
 });
 
 function renderOther() {
@@ -524,6 +526,7 @@ function renderOther() {
 
 document.querySelector(".side-other").addEventListener("click", () => {
   renderOther();
+  document.querySelector(".project-title").innerHTML = `<h2>Other</h2>`;
 });
 
 document.getElementById("addButton").addEventListener("click", addToList);
@@ -571,6 +574,9 @@ document.querySelector(".close").addEventListener("click", () => {
 
 document.querySelector(".completed-tasks").addEventListener("click", () => {
   renderCompletedTasks();
+  document.querySelector(
+    ".project-title"
+  ).innerHTML = `<h2>Completed tasks</h2>`;
 });
 
 document.querySelector(".my-tasks").addEventListener("click", () => {
@@ -579,6 +585,7 @@ document.querySelector(".my-tasks").addEventListener("click", () => {
       ".projects"
     ).innerHTML = `<h4>add something to your to-do list or check your completed tasks</h4>`;
   } else renderTodoHTML();
+  document.querySelector(".project-title").innerHTML = `<h2>My tasks</h2>`;
 });
 
 document.getElementById("addButton").addEventListener("click", () => {
