@@ -7539,7 +7539,7 @@ function renderTodoHTML() {
   });
 }
 
-// renderTodoHTML();
+renderTodoHTML(); // function call to display items in localStorage
 
 function renderCompletedTasks() {
   if (localStorage.getItem("completed_tasks") != null) {
@@ -7593,60 +7593,6 @@ function renderCompletedTasks() {
       console.log(newArray);
       localStorage.setItem("completed_tasks", JSON.stringify(newArray));
       renderCompletedTasks();
-    });
-  });
-}
-
-function renderIncompleteTasks() {
-  if (localStorage.getItem("incomplete_tasks") != null) {
-    var incompleteTaskArray = JSON.parse(
-      localStorage.getItem("incomplete_tasks")
-    );
-    Array.from(incompleteTaskArray);
-  }
-  let incompleteTaskHTML = "";
-  incompleteTaskArray.forEach((task) => {
-    const html = `
-                  <div class="project">
-          <div class="top-line"></div>
-          <div class="left">
-            <div class="top">
-              <input type="radio" id="completed" />
-              <div class="todo-task">${task.name}</div>
-            </div>
-            <div class="bottom">
-              <i class="fa-regular fa-clock"></i>
-              <div class="time-display">${task.time}</div>
-              <i class="fa-regular fa-calendar"></i>
-              <div class="date-display">${task.date}</div>
-            </div>
-          </div>
-          <div class="right">
-            <div class="top">
-              <button class="delete">Delete</button>
-            </div>
-            <div class="bottom">
-              <div class="category-display">${task.category}</div>
-              <i class="fa-solid fa-hashtag"></i>
-            </div>
-          </div>
-        </div>
-    `;
-    incompleteTaskHTML += html;
-  });
-  document.querySelector(".projects").innerHTML = incompleteTaskHTML;
-
-  document.querySelectorAll(".delete").forEach((deleteButton, index) => {
-    deleteButton.addEventListener("click", () => {
-      var newArray = [];
-      const deletedItem = incompleteTaskArray.splice(index, 1);
-      incompleteTaskArray.filter((item) => {
-        if (item === deletedItem) return;
-        else newArray.push(item);
-      });
-      console.log(newArray);
-      localStorage.setItem("incomplete_tasks", JSON.stringify(newArray));
-      renderIncompleteTasks();
     });
   });
 }
@@ -7737,6 +7683,7 @@ function renderHome() {
 
 document.querySelector(".side-home").addEventListener("click", () => {
   renderHome();
+  document.querySelector(".project-title").innerHTML = `<h2>Home</h2>`;
 });
 
 function renderWork() {
@@ -7826,6 +7773,7 @@ function renderWork() {
 
 document.querySelector(".side-work").addEventListener("click", () => {
   renderWork();
+  document.querySelector(".project-title").innerHTML = `<h2>Work</h2>`;
 });
 
 function renderOther() {
@@ -7915,9 +7863,8 @@ function renderOther() {
 
 document.querySelector(".side-other").addEventListener("click", () => {
   renderOther();
+  document.querySelector(".project-title").innerHTML = `<h2>Other</h2>`;
 });
-
-document.getElementById("addButton").addEventListener("click", addToList);
 
 const projectArea = document.querySelector(".projects");
 if (projectArea.innerHTML === "") {
@@ -7962,6 +7909,9 @@ document.querySelector(".close").addEventListener("click", () => {
 
 document.querySelector(".completed-tasks").addEventListener("click", () => {
   renderCompletedTasks();
+  document.querySelector(
+    ".project-title"
+  ).innerHTML = `<h2>Completed tasks</h2>`;
 });
 
 document.querySelector(".my-tasks").addEventListener("click", () => {
@@ -7970,25 +7920,31 @@ document.querySelector(".my-tasks").addEventListener("click", () => {
       ".projects"
     ).innerHTML = `<h4>add something to your to-do list or check your completed tasks</h4>`;
   } else renderTodoHTML();
+  document.querySelector(".project-title").innerHTML = `<h2>My tasks</h2>`;
 });
 
-document.getElementById("addButton").addEventListener("click", () => {
-  document.querySelector(".form").style = `
+
+// form submission and input validation
+document.getElementById('form').addEventListener('submit', (event) => {
+  event.preventDefault();
+    addToList();
+    document.querySelector(".form").style = `
   display: none;
   `;
-  document.querySelector(".main-content").style = `
+    document.querySelector(".main-content").style = `
   filter: none;
   `;
-  document.querySelector("header").style = `
+    document.querySelector("header").style = `
   filter: none;
   `;
-  document.querySelector("aside").style = `
+    document.querySelector("aside").style = `
   filter: none;
   `;
-  document.querySelector(".project-title").style = `
+    document.querySelector(".project-title").style = `
   filter: none;
   `;
-});
+})
+
 
 // renderTodoHTML();
 
@@ -8008,10 +7964,10 @@ document.getElementById("addButton").addEventListener("click", () => {
 // if (localStorage.getItem("storage") != null) {
 // }
 
-renderTodoHTML();
+
 
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle.99b57d162b3bef74d2cb.js.map
+//# sourceMappingURL=bundle.28e359fbcf3a193a6ea8.js.map
