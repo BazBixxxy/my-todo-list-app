@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo App</title>
-  <script defer src="bundle.28e359fbcf3a193a6ea8.js"></script></head>
+  <script defer src="bundle.8316822a0b8e3a3e8e34.js"></script></head>
   <body>
     <header>
       <nav>
@@ -22,6 +22,7 @@
     <div class="project-title">
       <h2>My projects</h2>
     </div>
+
     <aside>
       <nav>
         <div class="top">Todo App</div>
@@ -61,12 +62,66 @@
         </div>
       </nav>
     </aside>
+
+    <div class="phone-nav">
+      <div class="left">
+        <button class="chevron">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        Todo App
+      </div>
+      <div class="right"><i class="fa-regular fa-user"></i> Audrey</div>
+    </div>
+
+    <div class="phone-sidebar">
+      <div class="top">
+        <div class="side-item add-item" id="add-item">
+          <div class="left"><i class="fa-solid fa-circle-plus"></i></div>
+          <div class="right">add task</div>
+        </div>
+        <div class="side-item my-tasks" id="my-tasks">
+          <div class="left"><i class="fa-solid fa-list-check"></i></div>
+          <div class="right">my tasks</div>
+        </div>
+        <div class="side-item completed-tasks" id="completed-tasks">
+          <div class="left"><i class="fa-solid fa-list"></i></div>
+          <div class="right">completed</div>
+        </div>
+        <div class="side-item inbox">
+          <div class="left"><i class="fa-solid fa-inbox"></i></div>
+          <div class="right">inbox</div>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="panel-heading">Categories</div>
+        <div class="side-item side-home" id="home">
+          <div class="left"><div class="hash">#</div></div>
+          <div class="right">home</div>
+        </div>
+        <div class="side-item side-work" id="work">
+          <div class="left"><div class="hash">#</div></div>
+          <div class="right">work</div>
+        </div>
+        <div class="side-item side-other" id="other">
+          <div class="left"><div class="hash">#</div></div>
+          <div class="right">other</div>
+        </div>
+      </div>
+    </div>
+
     <div class="form">
-      <div class="close">&#10005;</div>
+      <div class="close" id="close">&#10005;</div>
       <form id="form">
         <div class="input-field">
           <label for="task">Task</label>
-          <input type="text" id="task" name="task" minlength="3" maxlength="40" required />
+          <input
+            type="text"
+            id="task"
+            name="task"
+            minlength="3"
+            maxlength="40"
+            required
+          />
         </div>
         <div class="input-field">
           <label for="time">Time</label>
@@ -101,6 +156,7 @@
         <button type="submit" id="addButton">Add To List</button>
       </form>
     </div>
+
     <div class="main-content">
       <div class="projects"></div>
     </div>
