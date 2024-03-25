@@ -1,22 +1,7 @@
 .main-content {
   margin-top: 169px;
   margin-left: 250px;
-  width: 900px;
-}
-
-.project-title {
-  width: 100%;
-  height: 170px;
-  background-color: white;
-  box-shadow: 0 1.5px 3px -2px lightgray;
-  display: flex;
-  align-items: flex-end;
-  position: fixed;
-  top: 0;
-  margin-left: 250px;
-  color: var(--standard-color);
-  padding-bottom: 15px;
-  z-index: 20;
+  padding-right: 80px;
 }
 
 .main-content h2 {
@@ -25,12 +10,14 @@
 }
 
 .project {
-  /* background-color: lavenderblush; */
-  width: 100%;
-  height: 80px;
-  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  padding: 20px;
 }
 
 .top-line {
@@ -41,25 +28,34 @@
 }
 
 .project .left {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-rows: 70% 1fr;
   grid-template-rows: 70% 1fr;
 }
 
 .project .left .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .project input[type="radio"] {
   margin-right: 20px;
   margin-bottom: 5px;
-  width: 30px;
 }
 
 .project .left .bottom {
-  margin-left: 40px;
+  margin-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .fa-clock,
@@ -69,6 +65,7 @@
   font-size: 0.8rem;
   margin-left: 10px;
   color: var(--time-color);
+  margin-top: 3px;
 }
 
 .date-display,
@@ -81,9 +78,12 @@
 }
 
 .project .right {
-  width: 100px;
+  display: -ms-grid;
   display: grid;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-rows: 70% 1fr;
   grid-template-rows: 70% 1fr;
 }
 
@@ -109,8 +109,12 @@
 }
 
 .project .right .bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .project .fa-hashtag {

@@ -1,0 +1,79 @@
+@media (max-width: 600px) {
+  header {
+    display: none;
+  }
+
+  aside {
+    display: none;
+  }
+
+  .project-title {
+    height: 140px;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: 0;
+    padding-bottom: 10px;
+  }
+
+  .project-title h2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 5px;
+    margin-right: 15px;
+  }
+
+  .phone-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .phone-sidebar {
+    display: initial;
+  }
+
+  .form {
+    width: 400px;
+  }
+
+  .main-content {
+    margin-top: 140px;
+    margin-left: 0;
+    padding: 0;
+  }
+
+  .project {
+    overflow-x: hidden;
+  }
+
+  .project .left .bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1rem;
+    margin-left: -5px;
+  }
+
+  .fa-clock,
+  .fa-calendar {
+    display: none;
+  }
+
+  .time-display,
+  .date-display {
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 800px) {
+}
+
+@media (min-width: 1600px) {
+  .main-content {
+    margin-top: 169px;
+    margin-left: 250px;
+    padding-right: 200px;
+  }
+}

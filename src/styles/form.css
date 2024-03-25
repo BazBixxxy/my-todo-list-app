@@ -1,5 +1,4 @@
 .form {
-  /* background-color: rgb(254, 197, 174); */
   display: none;
   background-color: var(--header-background);
   width: 500px;

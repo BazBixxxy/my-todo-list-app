@@ -3,6 +3,7 @@ import "./styles/header.css";
 import "./styles/sidebar.css";
 import "./styles/form.css";
 import "./styles/style.css";
+import "./styles/media.css";
 import "@fortawesome/fontawesome-free/js/fontawesome";
 import "@fortawesome/fontawesome-free/js/solid";
 import "@fortawesome/fontawesome-free/js/regular";
@@ -162,7 +163,7 @@ function renderCompletedTasks() {
   completedTaskArray.forEach((value) => {
     value.forEach((task) => {
       const html = `
-              <div class="project">
+        <div class="project">
           <div class="top-line"></div>
           <div class="left">
             <div class="top">
@@ -532,45 +533,162 @@ document.querySelector(".my-tasks").addEventListener("click", () => {
   document.querySelector(".project-title").innerHTML = `<h2>My tasks</h2>`;
 });
 
-
 // form submission and input validation
-document.getElementById('form').addEventListener('submit', (event) => {
+document.getElementById("form").addEventListener("submit", (event) => {
   event.preventDefault();
-    addToList();
-    document.querySelector(".form").style = `
+  addToList();
+  document.querySelector(".form").style = `
   display: none;
   `;
+  document.querySelector(".main-content").style = `
+  filter: none;
+  `;
+  document.querySelector("header").style = `
+  filter: none;
+  `;
+  document.querySelector("aside").style = `
+  filter: none;
+  `;
+  document.querySelector(".project-title").style = `
+  filter: none;
+  `;
+});
+
+const show = function () {
+  document.querySelector(".phone-sidebar").classList.toggle("show");
+};
+
+document.querySelector(".chevron").addEventListener("click", () => {
+  show();
+  if (document.querySelector(".phone-sidebar").classList.contains("show")) {
     document.querySelector(".main-content").style = `
-  filter: none;
-  `;
-    document.querySelector("header").style = `
-  filter: none;
-  `;
-    document.querySelector("aside").style = `
-  filter: none;
+    filter: blur(5px);
+    transition: 1s ease all;
   `;
     document.querySelector(".project-title").style = `
-  filter: none;
+      filter: blur(5px);
+    `;
+  } else {
+    document.querySelector(".main-content").style = "filter: none;";
+    document.querySelector(".project-title").style = "filter: none";
+  }
+});
+
+document.getElementById("add-item").addEventListener("click", () => {
+  show();
+  if (document.querySelector(".phone-sidebar").classList.contains("show")) {
+    document.querySelector(".main-content").style = `
+    filter: blur(5px);
+    transition: 1s ease all;
   `;
-})
+    document.querySelector(".project-title").style = `
+      filter: blur(5px);
+    `;
+  } else {
+    document.querySelector(".main-content").style = "filter: none;";
+    document.querySelector(".project-title").style = "filter: none";
+    document.querySelector(".form").style = `
+        display: block;`;
+  }
+});
 
+document.getElementById("my-tasks").addEventListener("click", () => {
+  if (JSON.parse(localStorage.getItem("storage")) == []) {
+    document.querySelector(
+      ".projects"
+    ).innerHTML = `<h4>add something to your to-do list or check your completed tasks</h4>`;
+  } else renderTodoHTML();
+  document.querySelector(".project-title").innerHTML = `<h2>My tasks</h2>`;
 
-// renderTodoHTML();
+  show();
+  if (document.querySelector(".phone-sidebar").classList.contains("show")) {
+    document.querySelector(".main-content").style = `
+    filter: blur(5px);
+    transition: 1s ease all;
+  `;
+    document.querySelector(".project-title").style = `
+      filter: blur(5px);
+    `;
+  } else {
+    document.querySelector(".main-content").style = "filter: none;";
+    document.querySelector(".project-title").style = "filter: none";
+  }
+});
 
-// window.onload = function () {
-//   var reloading = sessionStorage.getItem("reloading");
-//   if (reloading) {
-//     sessionStorage.removeItem("reloading");
-//     renderTodoHTML();
-//   }
-// };
+document.getElementById("completed-tasks").addEventListener("click", () => {
+  renderCompletedTasks();
+  document.querySelector(
+    ".project-title"
+  ).innerHTML = `<h2>Completed tasks</h2>`;
 
-// function reloadP() {
-//   sessionStorage.setItem("reloading", "true");
-//   document.location.reload();
-// }
+  show();
+  if (document.querySelector(".phone-sidebar").classList.contains("show")) {
+    document.querySelector(".main-content").style = `
+    filter: blur(5px);
+    transition: 1s ease all;
+  `;
+    document.querySelector(".project-title").style = `
+      filter: blur(5px);
+    `;
+  } else {
+    document.querySelector(".main-content").style = "filter: none;";
+    document.querySelector(".project-title").style = "filter: none";
+  }
+});
 
-// if (localStorage.getItem("storage") != null) {
-// }
+document.getElementById("home").addEventListener("click", () => {
+  renderHome();
+  document.querySelector(".project-title").innerHTML = `<h2>Home</h2>`;
 
+  show();
+  if (document.querySelector(".phone-sidebar").classList.contains("show")) {
+    document.querySelector(".main-content").style = `
+    filter: blur(5px);
+    transition: 1s ease all;
+  `;
+    document.querySelector(".project-title").style = `
+      filter: blur(5px);
+    `;
+  } else {
+    document.querySelector(".main-content").style = "filter: none;";
+    document.querySelector(".project-title").style = "filter: none";
+  }
+});
 
+document.getElementById("work").addEventListener("click", () => {
+  renderWork();
+  document.querySelector(".project-title").innerHTML = `<h2>Work</h2>`;
+
+  show();
+  if (document.querySelector(".phone-sidebar").classList.contains("show")) {
+    document.querySelector(".main-content").style = `
+    filter: blur(5px);
+    transition: 1s ease all;
+  `;
+    document.querySelector(".project-title").style = `
+      filter: blur(5px);
+    `;
+  } else {
+    document.querySelector(".main-content").style = "filter: none;";
+    document.querySelector(".project-title").style = "filter: none";
+  }
+});
+
+document.getElementById("other").addEventListener("click", () => {
+  renderOther();
+  document.querySelector(".project-title").innerHTML = `<h2>Other</h2>`;
+
+  show();
+  if (document.querySelector(".phone-sidebar").classList.contains("show")) {
+    document.querySelector(".main-content").style = `
+    filter: blur(5px);
+    transition: 1s ease all;
+  `;
+    document.querySelector(".project-title").style = `
+      filter: blur(5px);
+    `;
+  } else {
+    document.querySelector(".main-content").style = "filter: none;";
+    document.querySelector(".project-title").style = "filter: none";
+  }
+});

@@ -19,6 +19,24 @@
   --delete-color: rgb(221, 23, 23);
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --header-background: aliceblue;
+    --font-color: hsl(0, 0%, 17%);
+    --white-text: whitesmoke;
+    --standard-color: hsl(240, 25%, 23%);
+    --call-to-action: hsl(17, 100%, 50%);
+    --hover-color: hsl(240, 26%, 17%);
+    --time-color: rgb(4, 159, 4);
+    --delete-color: rgb(221, 23, 23);
+  }
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 input {
   padding-left: 15px;
 }
