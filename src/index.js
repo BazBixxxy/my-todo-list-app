@@ -18,6 +18,10 @@ class Todo {
   }
 }
 
+  if (localStorage.getItem("storage") == null) {
+    localStorage.setItem("storage", "[]");
+  }
+
 function addToList() {
   const taskElement = document.getElementById("task");
   const timeElement = document.getElementById("time");
