@@ -7781,6 +7781,10 @@ class Todo {
   }
 }
 
+  if (localStorage.getItem("storage") == null) {
+    localStorage.setItem("storage", "[]");
+  }
+
 function addToList() {
   const taskElement = document.getElementById("task");
   const timeElement = document.getElementById("time");
@@ -8460,4 +8464,4 @@ document.getElementById("other").addEventListener("click", () => {
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle.8316822a0b8e3a3e8e34.js.map
+//# sourceMappingURL=bundle.483fd9f1474476982c98.js.map
