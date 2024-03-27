@@ -65,6 +65,10 @@
   .date-display {
     margin-top: 5px;
   }
+
+  .close{
+    margin-right: 30px;
+  }
 }
 
 @media (max-width: 800px) {

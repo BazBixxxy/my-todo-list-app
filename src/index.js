@@ -640,7 +640,7 @@ document.getElementById("completed-tasks").addEventListener("click", () => {
   }
 });
 
-document.getElementById("home").addEventListener("click", () => {
+document.getElementById("phone-home").addEventListener("click", () => {
   renderHome();
   document.querySelector(".project-title").innerHTML = `<h2>Home</h2>`;
 
@@ -659,7 +659,7 @@ document.getElementById("home").addEventListener("click", () => {
   }
 });
 
-document.getElementById("work").addEventListener("click", () => {
+document.getElementById("phone-work").addEventListener("click", () => {
   renderWork();
   document.querySelector(".project-title").innerHTML = `<h2>Work</h2>`;
 
@@ -678,7 +678,7 @@ document.getElementById("work").addEventListener("click", () => {
   }
 });
 
-document.getElementById("other").addEventListener("click", () => {
+document.getElementById("phone-other").addEventListener("click", () => {
   renderOther();
   document.querySelector(".project-title").innerHTML = `<h2>Other</h2>`;
 

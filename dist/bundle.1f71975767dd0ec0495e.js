@@ -6405,7 +6405,6 @@ header nav > .right {
 
 .phone-nav > .right {
   font-size: 1.5rem;
-  margin-right: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6420,7 +6419,7 @@ header nav > .right {
   border: none;
   font-size: 1.2rem;
   color: var(--standard-color);
-}`, "",{"version":3,"sources":["webpack://./src/styles/header.css"],"names":[],"mappings":"AAAA;EACE,0CAA0C;EAC1C,eAAe;EACf,MAAM;EACN,QAAQ;EACR,WAAW;EACX,kBAAkB;EAClB,mBAAmB;EACnB,WAAW;AACb;;AAEA;EACE,WAAW;EACX,aAAa;EACb,oBAAoB;EACpB,oBAAoB;EACpB,aAAa;EACb,yBAAyB;MACrB,sBAAsB;UAClB,mBAAmB;EAC3B,wBAAwB;MACpB,qBAAqB;UACjB,uBAAuB;AACjC;;AAEA;EACE,mBAAmB;MACf,WAAW;UACP,OAAO;AACjB;;AAEA;EACE,iBAAiB;EACjB,4BAA4B;EAC5B,kBAAkB;AACpB;;AAEA;EACE,YAAY;EACZ,YAAY;EACZ,UAAU;EACV,gBAAgB;EAChB,gBAAgB;EAChB,mBAAmB;AACrB;;AAEA;EACE,UAAU;EACV,oBAAoB;EACpB,oBAAoB;EACpB,aAAa;EACb,yBAAyB;MACrB,sBAAsB;UAClB,mBAAmB;AAC7B;;AAEA;EACE,iBAAiB;EACjB,4BAA4B;AAC9B;;AAEA;EACE,iBAAiB;EACjB,iBAAiB;EACjB,4BAA4B;AAC9B;;AAEA;EACE,gBAAgB;EAChB,eAAe;AACjB;;AAEA;EACE,WAAW;EACX,aAAa;EACb,uBAAuB;EACvB,8CAA8C;UACtC,sCAAsC;EAC9C,oBAAoB;EACpB,oBAAoB;EACpB,aAAa;EACb,sBAAsB;MAClB,mBAAmB;UACf,qBAAqB;EAC7B,eAAe;EACf,MAAM;EACN,kBAAkB;EAClB,4BAA4B;EAC5B,oBAAoB;EACpB,WAAW;AACb;;AAEA,qBAAqB;;AAErB;EACE,aAAa;EACb,0CAA0C;EAC1C,eAAe;EACf,MAAM;EACN,aAAa;EACb,yBAAyB;MACrB,sBAAsB;UAClB,mBAAmB;EAC3B,aAAa;EACb,aAAa;EACb,4BAA4B;AAC9B;;AAEA;EACE,mBAAmB;MACf,WAAW;UACP,OAAO;EACf,iBAAiB;AACnB;;AAEA;EACE,kBAAkB;AACpB;;AAEA;EACE,iBAAiB;EACjB,kBAAkB;EAClB,oBAAoB;EACpB,oBAAoB;EACpB,aAAa;EACb,yBAAyB;MACrB,sBAAsB;UAClB,mBAAmB;EAC3B,SAAS;AACX;;AAEA;EACE,gBAAgB;EAChB,YAAY;EACZ,iBAAiB;EACjB,4BAA4B;AAC9B","sourcesContent":["header {\n  background-color: var(--header-background);\n  position: fixed;\n  top: 0;\n  right: 0;\n  left: 150px;\n  padding-left: 30px;\n  padding-right: 30px;\n  z-index: 99;\n}\n\nheader > nav {\n  width: 100%;\n  padding: 30px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n\nheader nav > .left {\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n\n.fa-magnifying-glass {\n  font-size: 1.3rem;\n  color: var(--standard-color);\n  margin-right: 10px;\n}\n\ninput[type=\"search\"] {\n  height: 40px;\n  border: none;\n  width: 40%;\n  min-width: 200px;\n  max-width: 450px;\n  border-radius: 50px;\n}\n\nheader nav > .right {\n  width: 15%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n\n.fa-user {\n  font-size: 1.2rem;\n  color: var(--standard-color);\n}\n\n.profile-name {\n  margin-left: 20px;\n  font-size: 1.2rem;\n  color: var(--standard-color);\n}\n\n.fa-angle-down {\n  margin-left: 5px;\n  margin-top: 2px;\n}\n\n.project-title {\n  width: 100%;\n  height: 170px;\n  background-color: white;\n  -webkit-box-shadow: 0 1.5px 3px -2px lightgray;\n          box-shadow: 0 1.5px 3px -2px lightgray;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: end;\n      -ms-flex-align: end;\n          align-items: flex-end;\n  position: fixed;\n  top: 0;\n  margin-left: 250px;\n  color: var(--standard-color);\n  padding-bottom: 15px;\n  z-index: 20;\n}\n\n/* phone nav/header */\n\n.phone-nav {\n  width: 100dvw;\n  background-color: var(--header-background);\n  position: fixed;\n  top: 0;\n  display: none;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  padding: 30px;\n  z-index: 9999;\n  color: var(--standard-color);\n}\n\n.phone-nav > .left {\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  font-size: 1.5rem;\n}\n\n.fa-chevron-left {\n  margin-right: 10px;\n}\n\n.phone-nav > .right {\n  font-size: 1.5rem;\n  margin-right: 20px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  gap: 1rem;\n}\n\n.phone-nav button {\n  background: none;\n  border: none;\n  font-size: 1.2rem;\n  color: var(--standard-color);\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/styles/header.css"],"names":[],"mappings":"AAAA;EACE,0CAA0C;EAC1C,eAAe;EACf,MAAM;EACN,QAAQ;EACR,WAAW;EACX,kBAAkB;EAClB,mBAAmB;EACnB,WAAW;AACb;;AAEA;EACE,WAAW;EACX,aAAa;EACb,oBAAoB;EACpB,oBAAoB;EACpB,aAAa;EACb,yBAAyB;MACrB,sBAAsB;UAClB,mBAAmB;EAC3B,wBAAwB;MACpB,qBAAqB;UACjB,uBAAuB;AACjC;;AAEA;EACE,mBAAmB;MACf,WAAW;UACP,OAAO;AACjB;;AAEA;EACE,iBAAiB;EACjB,4BAA4B;EAC5B,kBAAkB;AACpB;;AAEA;EACE,YAAY;EACZ,YAAY;EACZ,UAAU;EACV,gBAAgB;EAChB,gBAAgB;EAChB,mBAAmB;AACrB;;AAEA;EACE,UAAU;EACV,oBAAoB;EACpB,oBAAoB;EACpB,aAAa;EACb,yBAAyB;MACrB,sBAAsB;UAClB,mBAAmB;AAC7B;;AAEA;EACE,iBAAiB;EACjB,4BAA4B;AAC9B;;AAEA;EACE,iBAAiB;EACjB,iBAAiB;EACjB,4BAA4B;AAC9B;;AAEA;EACE,gBAAgB;EAChB,eAAe;AACjB;;AAEA;EACE,WAAW;EACX,aAAa;EACb,uBAAuB;EACvB,8CAA8C;UACtC,sCAAsC;EAC9C,oBAAoB;EACpB,oBAAoB;EACpB,aAAa;EACb,sBAAsB;MAClB,mBAAmB;UACf,qBAAqB;EAC7B,eAAe;EACf,MAAM;EACN,kBAAkB;EAClB,4BAA4B;EAC5B,oBAAoB;EACpB,WAAW;AACb;;AAEA,qBAAqB;;AAErB;EACE,aAAa;EACb,0CAA0C;EAC1C,eAAe;EACf,MAAM;EACN,aAAa;EACb,yBAAyB;MACrB,sBAAsB;UAClB,mBAAmB;EAC3B,aAAa;EACb,aAAa;EACb,4BAA4B;AAC9B;;AAEA;EACE,mBAAmB;MACf,WAAW;UACP,OAAO;EACf,iBAAiB;AACnB;;AAEA;EACE,kBAAkB;AACpB;;AAEA;EACE,iBAAiB;EACjB,oBAAoB;EACpB,oBAAoB;EACpB,aAAa;EACb,yBAAyB;MACrB,sBAAsB;UAClB,mBAAmB;EAC3B,SAAS;AACX;;AAEA;EACE,gBAAgB;EAChB,YAAY;EACZ,iBAAiB;EACjB,4BAA4B;AAC9B","sourcesContent":["header {\n  background-color: var(--header-background);\n  position: fixed;\n  top: 0;\n  right: 0;\n  left: 150px;\n  padding-left: 30px;\n  padding-right: 30px;\n  z-index: 99;\n}\n\nheader > nav {\n  width: 100%;\n  padding: 30px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n\nheader nav > .left {\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n\n.fa-magnifying-glass {\n  font-size: 1.3rem;\n  color: var(--standard-color);\n  margin-right: 10px;\n}\n\ninput[type=\"search\"] {\n  height: 40px;\n  border: none;\n  width: 40%;\n  min-width: 200px;\n  max-width: 450px;\n  border-radius: 50px;\n}\n\nheader nav > .right {\n  width: 15%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n\n.fa-user {\n  font-size: 1.2rem;\n  color: var(--standard-color);\n}\n\n.profile-name {\n  margin-left: 20px;\n  font-size: 1.2rem;\n  color: var(--standard-color);\n}\n\n.fa-angle-down {\n  margin-left: 5px;\n  margin-top: 2px;\n}\n\n.project-title {\n  width: 100%;\n  height: 170px;\n  background-color: white;\n  -webkit-box-shadow: 0 1.5px 3px -2px lightgray;\n          box-shadow: 0 1.5px 3px -2px lightgray;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: end;\n      -ms-flex-align: end;\n          align-items: flex-end;\n  position: fixed;\n  top: 0;\n  margin-left: 250px;\n  color: var(--standard-color);\n  padding-bottom: 15px;\n  z-index: 20;\n}\n\n/* phone nav/header */\n\n.phone-nav {\n  width: 100dvw;\n  background-color: var(--header-background);\n  position: fixed;\n  top: 0;\n  display: none;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  padding: 30px;\n  z-index: 9999;\n  color: var(--standard-color);\n}\n\n.phone-nav > .left {\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  font-size: 1.5rem;\n}\n\n.fa-chevron-left {\n  margin-right: 10px;\n}\n\n.phone-nav > .right {\n  font-size: 1.5rem;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  gap: 1rem;\n}\n\n.phone-nav button {\n  background: none;\n  border: none;\n  font-size: 1.2rem;\n  color: var(--standard-color);\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -6514,6 +6513,10 @@ ___CSS_LOADER_EXPORT___.push([module.id, `@media (max-width: 600px) {
   .date-display {
     margin-top: 5px;
   }
+
+  .close{
+    margin-right: 30px;
+  }
 }
 
 @media (max-width: 800px) {
@@ -6525,7 +6528,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `@media (max-width: 600px) {
     margin-left: 250px;
     padding-right: 200px;
   }
-}`, "",{"version":3,"sources":["webpack://./src/styles/media.css"],"names":[],"mappings":"AAAA;EACE;IACE,aAAa;EACf;;EAEA;IACE,aAAa;EACf;;EAEA;IACE,aAAa;IACb,MAAM;IACN,QAAQ;IACR,OAAO;IACP,SAAS;IACT,oBAAoB;EACtB;;EAEA;IACE,kBAAkB;IAClB,SAAS;IACT,QAAQ;IACR,kBAAkB;IAClB,kBAAkB;EACpB;;EAEA;IACE,oBAAoB;IACpB,oBAAoB;IACpB,aAAa;EACf;;EAEA;IACE,gBAAgB;EAClB;;EAEA;IACE,YAAY;EACd;;EAEA;IACE,iBAAiB;IACjB,cAAc;IACd,UAAU;EACZ;;EAEA;IACE,kBAAkB;EACpB;;EAEA;IACE,oBAAoB;IACpB,oBAAoB;IACpB,aAAa;IACb,SAAS;IACT,iBAAiB;EACnB;;EAEA;;IAEE,aAAa;EACf;;EAEA;;IAEE,eAAe;EACjB;AACF;;AAEA;AACA;;AAEA;EACE;IACE,iBAAiB;IACjB,kBAAkB;IAClB,oBAAoB;EACtB;AACF","sourcesContent":["@media (max-width: 600px) {\n  header {\n    display: none;\n  }\n\n  aside {\n    display: none;\n  }\n\n  .project-title {\n    height: 140px;\n    top: 0;\n    right: 0;\n    left: 0;\n    margin: 0;\n    padding-bottom: 10px;\n  }\n\n  .project-title h2 {\n    position: absolute;\n    bottom: 0;\n    right: 0;\n    margin-bottom: 5px;\n    margin-right: 15px;\n  }\n\n  .phone-nav {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n  }\n\n  .phone-sidebar {\n    display: initial;\n  }\n\n  .form {\n    width: 400px;\n  }\n\n  .main-content {\n    margin-top: 140px;\n    margin-left: 0;\n    padding: 0;\n  }\n\n  .project {\n    overflow-x: hidden;\n  }\n\n  .project .left .bottom {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    gap: 1rem;\n    margin-left: -5px;\n  }\n\n  .fa-clock,\n  .fa-calendar {\n    display: none;\n  }\n\n  .time-display,\n  .date-display {\n    margin-top: 5px;\n  }\n}\n\n@media (max-width: 800px) {\n}\n\n@media (min-width: 1600px) {\n  .main-content {\n    margin-top: 169px;\n    margin-left: 250px;\n    padding-right: 200px;\n  }\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/styles/media.css"],"names":[],"mappings":"AAAA;EACE;IACE,aAAa;EACf;;EAEA;IACE,aAAa;EACf;;EAEA;IACE,aAAa;IACb,MAAM;IACN,QAAQ;IACR,OAAO;IACP,SAAS;IACT,oBAAoB;EACtB;;EAEA;IACE,kBAAkB;IAClB,SAAS;IACT,QAAQ;IACR,kBAAkB;IAClB,kBAAkB;EACpB;;EAEA;IACE,oBAAoB;IACpB,oBAAoB;IACpB,aAAa;EACf;;EAEA;IACE,gBAAgB;EAClB;;EAEA;IACE,YAAY;EACd;;EAEA;IACE,iBAAiB;IACjB,cAAc;IACd,UAAU;EACZ;;EAEA;IACE,kBAAkB;EACpB;;EAEA;IACE,oBAAoB;IACpB,oBAAoB;IACpB,aAAa;IACb,SAAS;IACT,iBAAiB;EACnB;;EAEA;;IAEE,aAAa;EACf;;EAEA;;IAEE,eAAe;EACjB;;EAEA;IACE,kBAAkB;EACpB;AACF;;AAEA;AACA;;AAEA;EACE;IACE,iBAAiB;IACjB,kBAAkB;IAClB,oBAAoB;EACtB;AACF","sourcesContent":["@media (max-width: 600px) {\n  header {\n    display: none;\n  }\n\n  aside {\n    display: none;\n  }\n\n  .project-title {\n    height: 140px;\n    top: 0;\n    right: 0;\n    left: 0;\n    margin: 0;\n    padding-bottom: 10px;\n  }\n\n  .project-title h2 {\n    position: absolute;\n    bottom: 0;\n    right: 0;\n    margin-bottom: 5px;\n    margin-right: 15px;\n  }\n\n  .phone-nav {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n  }\n\n  .phone-sidebar {\n    display: initial;\n  }\n\n  .form {\n    width: 400px;\n  }\n\n  .main-content {\n    margin-top: 140px;\n    margin-left: 0;\n    padding: 0;\n  }\n\n  .project {\n    overflow-x: hidden;\n  }\n\n  .project .left .bottom {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    gap: 1rem;\n    margin-left: -5px;\n  }\n\n  .fa-clock,\n  .fa-calendar {\n    display: none;\n  }\n\n  .time-display,\n  .date-display {\n    margin-top: 5px;\n  }\n\n  .close{\n    margin-right: 30px;\n  }\n}\n\n@media (max-width: 800px) {\n}\n\n@media (min-width: 1600px) {\n  .main-content {\n    margin-top: 169px;\n    margin-left: 250px;\n    padding-right: 200px;\n  }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -8403,7 +8406,7 @@ document.getElementById("completed-tasks").addEventListener("click", () => {
   }
 });
 
-document.getElementById("home").addEventListener("click", () => {
+document.getElementById("phone-home").addEventListener("click", () => {
   renderHome();
   document.querySelector(".project-title").innerHTML = `<h2>Home</h2>`;
 
@@ -8422,7 +8425,7 @@ document.getElementById("home").addEventListener("click", () => {
   }
 });
 
-document.getElementById("work").addEventListener("click", () => {
+document.getElementById("phone-work").addEventListener("click", () => {
   renderWork();
   document.querySelector(".project-title").innerHTML = `<h2>Work</h2>`;
 
@@ -8441,7 +8444,7 @@ document.getElementById("work").addEventListener("click", () => {
   }
 });
 
-document.getElementById("other").addEventListener("click", () => {
+document.getElementById("phone-other").addEventListener("click", () => {
   renderOther();
   document.querySelector(".project-title").innerHTML = `<h2>Other</h2>`;
 
@@ -8464,4 +8467,4 @@ document.getElementById("other").addEventListener("click", () => {
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle.483fd9f1474476982c98.js.map
+//# sourceMappingURL=bundle.1f71975767dd0ec0495e.js.map
