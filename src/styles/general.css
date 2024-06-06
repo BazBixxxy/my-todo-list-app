@@ -42,7 +42,9 @@ input {
 }
 
 #preloader {
-  background: black url(../../images/loader.gif) no-repeat center;
+  background: black
+    url("https://cdn.dribbble.com/users/358080/screenshots/1986444/loader.gif")
+    no-repeat center;
   background-size: 20%;
   height: 100dvh;
   width: 100%;
