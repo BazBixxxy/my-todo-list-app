@@ -40,3 +40,14 @@ body {
 input {
   padding-left: 15px;
 }
+
+#preloader {
+  background: black url(../../images/loader.gif) no-repeat center;
+  background-size: 20%;
+  height: 100dvh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 10000;
+}
