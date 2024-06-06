@@ -6257,7 +6257,20 @@ body {
 input {
   padding-left: 15px;
 }
-`, "",{"version":3,"sources":["webpack://./src/styles/general.css"],"names":[],"mappings":"AAAA;;;EAGE,SAAS;EACT,UAAU;EACV,sBAAsB;EACtB,uBAAuB;EACvB,gBAAgB;AAClB;;AAEA;EACE,8BAA8B;EAC9B,6BAA6B;EAC7B,wBAAwB;EACxB,oCAAoC;EACpC,oCAAoC;EACpC,iCAAiC;EACjC,4BAA4B;EAC5B,gCAAgC;AAClC;;AAEA;EACE;IACE,8BAA8B;IAC9B,6BAA6B;IAC7B,wBAAwB;IACxB,oCAAoC;IACpC,oCAAoC;IACpC,iCAAiC;IACjC,4BAA4B;IAC5B,gCAAgC;EAClC;AACF;;AAEA;EACE,kBAAkB;EAClB,gBAAgB;AAClB;;AAEA;EACE,kBAAkB;AACpB","sourcesContent":["*,\n*::after,\n*::before {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  font-family: sans-serif;\n  font-weight: 100;\n}\n\n:root {\n  --header-background: aliceblue;\n  --font-color: hsl(0, 0%, 17%);\n  --white-text: whitesmoke;\n  --standard-color: hsl(240, 25%, 23%);\n  --call-to-action: hsl(17, 100%, 50%);\n  --hover-color: hsl(240, 26%, 17%);\n  --time-color: rgb(4, 159, 4);\n  --delete-color: rgb(221, 23, 23);\n}\n\n@media (prefers-color-scheme: dark) {\n  :root {\n    --header-background: aliceblue;\n    --font-color: hsl(0, 0%, 17%);\n    --white-text: whitesmoke;\n    --standard-color: hsl(240, 25%, 23%);\n    --call-to-action: hsl(17, 100%, 50%);\n    --hover-color: hsl(240, 26%, 17%);\n    --time-color: rgb(4, 159, 4);\n    --delete-color: rgb(221, 23, 23);\n  }\n}\n\nbody {\n  overflow-x: hidden;\n  overflow-y: auto;\n}\n\ninput {\n  padding-left: 15px;\n}\n"],"sourceRoot":""}]);
+
+#preloader {
+  background: black
+    url("https://cdn.dribbble.com/users/358080/screenshots/1986444/loader.gif")
+    no-repeat center;
+  background-size: 20%;
+  height: 100dvh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 10000;
+}
+`, "",{"version":3,"sources":["webpack://./src/styles/general.css"],"names":[],"mappings":"AAAA;;;EAGE,SAAS;EACT,UAAU;EACV,sBAAsB;EACtB,uBAAuB;EACvB,gBAAgB;AAClB;;AAEA;EACE,8BAA8B;EAC9B,6BAA6B;EAC7B,wBAAwB;EACxB,oCAAoC;EACpC,oCAAoC;EACpC,iCAAiC;EACjC,4BAA4B;EAC5B,gCAAgC;AAClC;;AAEA;EACE;IACE,8BAA8B;IAC9B,6BAA6B;IAC7B,wBAAwB;IACxB,oCAAoC;IACpC,oCAAoC;IACpC,iCAAiC;IACjC,4BAA4B;IAC5B,gCAAgC;EAClC;AACF;;AAEA;EACE,kBAAkB;EAClB,gBAAgB;AAClB;;AAEA;EACE,kBAAkB;AACpB;;AAEA;EACE;;oBAEkB;EAClB,oBAAoB;EACpB,cAAc;EACd,WAAW;EACX,eAAe;EACf,MAAM;EACN,SAAS;EACT,cAAc;AAChB","sourcesContent":["*,\n*::after,\n*::before {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  font-family: sans-serif;\n  font-weight: 100;\n}\n\n:root {\n  --header-background: aliceblue;\n  --font-color: hsl(0, 0%, 17%);\n  --white-text: whitesmoke;\n  --standard-color: hsl(240, 25%, 23%);\n  --call-to-action: hsl(17, 100%, 50%);\n  --hover-color: hsl(240, 26%, 17%);\n  --time-color: rgb(4, 159, 4);\n  --delete-color: rgb(221, 23, 23);\n}\n\n@media (prefers-color-scheme: dark) {\n  :root {\n    --header-background: aliceblue;\n    --font-color: hsl(0, 0%, 17%);\n    --white-text: whitesmoke;\n    --standard-color: hsl(240, 25%, 23%);\n    --call-to-action: hsl(17, 100%, 50%);\n    --hover-color: hsl(240, 26%, 17%);\n    --time-color: rgb(4, 159, 4);\n    --delete-color: rgb(221, 23, 23);\n  }\n}\n\nbody {\n  overflow-x: hidden;\n  overflow-y: auto;\n}\n\ninput {\n  padding-left: 15px;\n}\n\n#preloader {\n  background: black\n    url(\"https://cdn.dribbble.com/users/358080/screenshots/1986444/loader.gif\")\n    no-repeat center;\n  background-size: 20%;\n  height: 100dvh;\n  width: 100%;\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  z-index: 10000;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -8467,4 +8480,4 @@ document.getElementById("phone-other").addEventListener("click", () => {
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle.1f71975767dd0ec0495e.js.map
+//# sourceMappingURL=bundle.7bc1969420975817dec8.js.map
